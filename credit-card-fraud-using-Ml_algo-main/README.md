@@ -1,91 +1,94 @@
-# Credit Card Fraud Detection System
+💳 Credit Card Fraud Detection System
 
-🚀 [Live Demo](https://creditcardfraudrahulapex.streamlit.app)
+An end-to-end machine learning project designed to identify fraudulent credit card transactions with high accuracy. The system integrates multiple ML models, handles data imbalance, and provides an interactive Streamlit web app for real-time fraud detection.
 
-A complete machine learning system for detecting credit card fraud with multiple models and a Streamlit web interface.
+🚀 Key Highlights
 
-## Features
+🔍 Fraud Detection with ML Models: Logistic Regression, Decision Tree, Random Forest, SVM, and Gradient Boosting
 
-- Multiple ML Models: Logistic Regression, Decision Tree, Random Forest, SVM, Gradient Boosting
-- Class Imbalance Handling: SMOTE oversampling technique
-- Interactive Web UI: Streamlit-based interface for real-time predictions
-- Model Comparison: Visual comparison of model performances
-- Modular Design: Separate modules for preprocessing, training, and deployment
+⚖️ Class Imbalance Solution: SMOTE oversampling for balanced training
 
-## Project Structure
+🎨 Interactive Web App: Built with Streamlit for easy predictions & visualization
 
-```
-├── creditcard.csv          # Dataset (Kaggle credit card fraud dataset)
-├── data_preprocessing.py   # Data loading and preprocessing functions
-├── model_training.py       # Model training and evaluation
-├── app.py                 # Streamlit web application
-├── requirements.txt       # Python dependencies
-├── best_model.pkl         # Trained best model (generated after training)
-├── scaler.pkl            # Feature scaler (generated after training)
-└── model_results.csv     # Model comparison results (generated after training)
-```
+📊 Model Comparison: Performance metrics and visualizations for all models
 
-## Installation
+🧩 Modular Design: Separate scripts for preprocessing, training, and deployment
 
-1. Install dependencies:
-```bash
+📂 Project Structure
+├── creditcard.csv          # Kaggle dataset
+├── data_preprocessing.py   # Data loading & preprocessing
+├── model_training.py       # Model training & evaluation
+├── app.py                  # Streamlit web application
+├── requirements.txt        # Dependencies
+├── best_model.pkl          # Saved best-performing model
+├── scaler.pkl              # Feature scaler
+└── model_results.csv       # Model comparison results
+
+⚙️ Installation
+
+Clone the repository and install dependencies:
+
 pip install -r requirements.txt
-```
 
-## Usage
+🛠️ Usage
+1️⃣ Train Models
 
-### 1. Train Models
-Run the model training script to train all models and save the best one:
-```bash
+Run the training script to build and evaluate models:
+
 python model_training.py
-```
 
-This will:
-- Load and preprocess the dataset
-- Handle class imbalance using SMOTE
-- Train 5 different ML models
-- Evaluate and compare models
-- Save the best performing model as `best_model.pkl`
 
-### 2. Run the Web App
+Preprocesses data & applies SMOTE
+
+Trains 5 different models
+
+Evaluates and selects the best model
+
+Saves the model as best_model.pkl
+
+2️⃣ Run the Web App
+
 Launch the Streamlit application:
-```bash
+
 streamlit run app.py
-```
 
-The web app provides:
-- Fraud Detection Tab: Input transaction features and get real-time predictions
-- Model Comparison Tab: View performance metrics of all trained models
-- Interactive Gauges: Visual representation of fraud probability
 
-## Model Performance
+The app allows you to:
 
-The system trains and compares:
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- Support Vector Machine (SVM)
-- Gradient Boosting
+Enter transaction details for real-time fraud detection
 
-Models are evaluated using:
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- ROC-AUC
+Compare models and visualize their performance
 
-## Dataset
+📈 Model Evaluation Metrics
 
-The system expects a credit card fraud dataset with:
-- Time: Time elapsed since first transaction
-- Amount: Transaction amount
-- V1-V28: PCA-transformed features
-- Class: Target variable (0=Legitimate, 1=Fraud)
+Each model is tested on:
 
-## Key Features
+Accuracy
 
-- Data Preprocessing: Automatic scaling of Amount and Time features
-- Class Imbalance: SMOTE oversampling for balanced training
-- Model Selection: Automatic selection of best model based on F1-score
-- Real-time Prediction: Interactive web interface for fraud detection
-- Visualization: Performance comparison charts and fraud probability gauges
+Precision
+
+Recall
+
+F1-Score
+
+ROC-AUC
+
+📊 Dataset
+
+Source: Kaggle Credit Card Fraud Dataset
+
+Features:
+
+Time: Time elapsed since first transaction
+
+Amount: Transaction amount
+
+V1–V28: PCA-transformed features
+
+Class: Target variable (0 = Legitimate, 1 = Fraud)
+
+🌟 Why This Project?
+
+Fraudulent transactions are rare but critical. This system tackles imbalanced data, evaluates multiple models, and provides a user-friendly web interface to test predictions in real-time—making it practical for real-world fraud detection scenarios.
+
+✨ Contributions are welcome! Fork the repo, raise issues, or submit pull requests.
